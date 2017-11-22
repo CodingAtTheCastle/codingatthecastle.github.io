@@ -1,0 +1,38 @@
+body {
+    text-align: center;
+}
+
+.round_img {
+    border-radius: 100%;
+}
+
+/*
+position relative så att arrows och bullets håller sig inom ramarna
+padding-bottom så att bullets får plats under innehållet
+*/
+#glide_test {
+    position: relative;
+    padding-bottom: 50px;
+}
+
+/*
+Småändringar och justering av färg på bullets
+*/
+.glide__arrow {
+    border: 0;
+}
+
+.glide__bullets>* {
+    display: inline-block;
+    background-color: #ddd;
+}
+
+.glide__bullets>*.active {
+    background-color: #aaa;
+}
+
+.glide__bullets > *:hover,
+.glide__bullets > *:focus {
+  border: 2px solid #aaa;
+  background-color: #ddd;
+}

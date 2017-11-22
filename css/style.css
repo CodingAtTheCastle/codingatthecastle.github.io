@@ -14,6 +14,7 @@ Therefore you can use i to set a dynamic height that keep aspect ratio.
 */
 .header {
     padding-top: 60%;
+    max-height: 400px;
     background-color: #320734;
     background-image: url('../img/splash.jpg');
     -webkit-background-size: cover;
@@ -25,6 +26,10 @@ Therefore you can use i to set a dynamic height that keep aspect ratio.
 }
 
 @media screen and (max-width: 500px) {
+    /*
+    Change to a smaller background-image if window isl ess than 500px.
+    This is nice to have so that mobile devices do not have to waste bandwidth by loading a big image that is way larger then their screen.
+    */
     .header {
         background-image: url('../img/splash.small.jpg');
     }
