@@ -7,6 +7,13 @@ body {
 }
 
 /*
+objekt som har classen hidden är dolda, det är en bra class att kunna toggla av och på med javascript
+*/
+.hidden {
+    display: none;
+}
+
+/*
 position relative så att arrows och bullets håller sig inom ramarna
 padding-bottom så att bullets får plats under innehållet
 */
