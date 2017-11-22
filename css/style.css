@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+html, body {
+    margin: 0;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+}
+
+/*
+If you apply padding-top as a percentage it is based on the objects width.
+Therefore you can use i to set a dynamic height that keep aspect ratio.
+*/
+.header {
+    padding-top: 60%;
+    background-color: #320734;
+    background-image: url('../img/splash.jpg');
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+@media screen and (max-width: 500px) {
+    .header {
+        background-image: url('../img/splash.small.jpg');
+    }
+}
+.main_content {
+    padding: 20px;
+    max-width: 500px;
+    margin: 0 auto;
+}
