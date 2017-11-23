@@ -9,7 +9,18 @@ body {
 }
 
 .header {
+    position: relative;
     height: 80vh;
+    overflow: hidden;
+    background-color: #320734;
+}
+
+.header_background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     background-color: #320734;
     background-image: url('../img/splash.jpg');
     -webkit-background-size: cover;
@@ -25,8 +36,10 @@ body {
     Css inside this media query applies on screens smallen than 600px
     */
     .header {
-        background-image: url('../img/splash.small.jpg');
         height: 50vh;
+    }
+    .header_background {
+        background-image: url('../img/splash.small.jpg');
     }
     .main_content h1 {
         font-size: 1.5em;
