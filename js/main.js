@@ -22,7 +22,7 @@ function scrollStuff() {
         header_background.style.opacity = opacityValue;
     } else {
         header_background.style.transform = 'translateY(0px)';
-        header_background.style.opacity = 0;
+        header_background.style.opacity = 1;
     }
 
 }
