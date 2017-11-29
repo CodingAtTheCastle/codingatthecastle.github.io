@@ -63,23 +63,6 @@ a:hover:before {
     background-repeat: no-repeat;
 }
 
-@media screen and (max-width: 600px) {
-    /*
-    Css inside this media query applies on screens smallen than 600px
-    */
-    .header {
-        height: 50vh;
-    }
-    .header_background {
-        background-image: url('../img/splash.small.jpg');
-    }
-    .main_content h1 {
-        font-size: 1.5em;
-    }
-    .main_content h2 {
-        font-size: 1.2em;
-    }
-}
 .main_content {
     padding: 20px;
     max-width: 500px;
@@ -135,4 +118,30 @@ a:hover:before {
     position: relative;
     width: 100%;
     padding-top: 50%;
+}
+
+@media screen and (max-width: 600px) {
+    /*
+    Css inside this media query applies on screens smallen than 600px
+    */
+    .header {
+        height: 50vh;
+    }
+    .header_background {
+        background-image: url('../img/splash.small.jpg');
+    }
+    .main_content h1 {
+        font-size: 1.5em;
+    }
+    .main_content h2 {
+        font-size: 1.2em;
+    }
+
+    .largeEmojis {
+        font-size: 60px;
+    }
+
+    #googlemap {
+        padding-top: 90%;
+    }
 }
