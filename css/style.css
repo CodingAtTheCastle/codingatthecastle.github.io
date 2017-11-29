@@ -79,8 +79,9 @@ a:hover:before {
 }
 .main_content {
     padding: 20px;
-    max-width: 420px;
+    max-width: 500px;
     margin: 0 auto;
+    text-align: center
 }
 
 .links_content {
