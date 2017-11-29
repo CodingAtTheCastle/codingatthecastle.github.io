@@ -76,12 +76,19 @@ a:hover:before {
     .main_content h1 {
         font-size: 1.5em;
     }
+    .main_content h2 {
+        font-size: 1.2em;
+    }
 }
 .main_content {
     padding: 20px;
     max-width: 500px;
     margin: 0 auto;
     text-align: center
+}
+
+.largeEmojis {
+    font-size: 72px;
 }
 
 .links_content {
@@ -96,28 +103,36 @@ a:hover:before {
 /*
     Google Maps stuff below
 */
-#map {
+
+.mapwrapper {
+    position: relative;
+}
+
+.mapoverlay {
+    position: absolute;
+    text-align: left;
+    bottom: 30px;
+    left: 30px;
+    background-color: #fff;
+    padding: 20px;
+    z-index: 2;
+    color: #d59563
+}
+
+.mapoverlay a:hover:before {
+    visibility: visible;
+    -webkit-transform: scaleX(1);
+     transform: scaleX(1);
+}
+
+.mapoverlay a:after {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#googlemap {
     position: relative;
     width: 100%;
     padding-top: 50%;
-}
-
-.kd-tabbed-vert.header-links .kd-tabbutton a {
-  color: #757575;
-  display: inline-block;
-  height: 100%;
-  padding: 0 24px;
-  width: 100%;
-}
-
-.kd-tabbed-vert.header-links .kd-tabbutton {
-  padding: 0;
-}
-
-.kd-tabbed-vert.header-links .kd-tabbutton.selected a {
-  color: #03a9f4;
-}
-
-.kd-tabbed-vert.header-links .kd-tabbutton a:focus {
-  text-decoration: none;
 }
