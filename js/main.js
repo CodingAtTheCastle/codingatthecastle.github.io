@@ -115,7 +115,7 @@ function initMap() {
     var markerImage = 'img/CastleCodingMarker.png';
     var markerImage = {
         url: 'img/CastleCodingMarker.png',
-        scaledSize: new google.maps.Size(100, 108)
+        scaledSize: new google.maps.Size(80, 86)
       };
     var marker = new google.maps.Marker({
         position: theCastleLatLng,

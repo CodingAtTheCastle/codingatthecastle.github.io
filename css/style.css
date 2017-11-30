@@ -95,12 +95,11 @@ a:hover:before {
 .mapoverlay {
     position: absolute;
     text-align: left;
-    bottom: 30px;
-    left: 30px;
+    bottom: 25px;
+    left: 25px;
     background-color: #fff;
     padding: 20px;
     z-index: 2;
-    color: #d59563
 }
 
 .mapoverlay a:hover:before {
