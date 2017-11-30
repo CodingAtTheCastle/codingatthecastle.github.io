@@ -75,6 +75,37 @@ a:hover:before {
     margin: 30px 0;
 }
 
+.spegelsalen {
+    display: block;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.separator {
+    color: #d69563;
+    margin: 30px auto 10px;
+    max-width: 240px;
+    text-align: center;
+    position: relative;
+}
+
+.separator:before, .separator:after {
+    display: block;
+    width: 40%;
+    content: "";
+    margin-top: 9px;
+    border: 1px solid #d69563;
+}
+
+.separator:before {
+    float: left;
+}
+
+.separator:after {
+    float: right;
+}
+
 .links_content {
     padding: 20px;
     text-align: center
