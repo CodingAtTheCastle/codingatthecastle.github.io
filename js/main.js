@@ -32,6 +32,20 @@ function initMap() {
 
     var markerDropped = false;
     var map_obj = document.getElementById('googlemap');
+
+    /*
+      Go here to create a map style: https://mapstyle.withgoogle.com/
+
+      Make sure to add the following:
+      
+      {
+        featureType: 'poi',
+        stylers: [{visibility: 'off'}]
+      }
+
+      to get a cleaner map without a bunch of Points of Interests
+
+    */
     var map_style = [
         {elementType: 'geometry', stylers: [{color: '#242f3e'}]},
         {elementType: 'labels.text.stroke', stylers: [{color: '#242f3e'}]},
