@@ -30,6 +30,7 @@ function scrollStuff() {
 
 function initMap() {
 
+    var markerDropped = false;
     var map_obj = document.getElementById('googlemap');
     var map_style = [
         {elementType: 'geometry', stylers: [{color: '#242f3e'}]},
@@ -119,12 +120,25 @@ function initMap() {
       };
     var marker = new google.maps.Marker({
         position: theCastleLatLng,
-        map: map,
         animation: google.maps.Animation.DROP,
         title: 'Castle Coding',
         icon: markerImage,
     });
 
+    /*
+      Using Waypoints Inview to trigger a marker drop when .mapoverlay comes in view
+      http://imakewebthings.com/waypoints/
+    */
 
+    var waypoint = new Waypoint.Inview({
+      element: document.querySelector('.mapoverlay'),
+      enter: function(direction) {
+        //mapoverlay is now on screen, add the marker if markerDropped is false
+        if (!markerDropped) {
+          marker.setMap(map);
+          markerDropped = true;
+        }
+      }
+    });
 }
 
