@@ -94,7 +94,7 @@ a:hover:before {
     display: block;
     width: 40%;
     content: "";
-    margin-top: 9px;
+    margin-top: 10px;
     border: 1px solid #d69563;
 }
 
