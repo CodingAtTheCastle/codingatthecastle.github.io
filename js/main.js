@@ -36,24 +36,13 @@ function initMap() {
         {elementType: 'labels.text.stroke', stylers: [{color: '#242f3e'}]},
         {elementType: 'labels.text.fill', stylers: [{color: '#746855'}]},
         {
+          featureType: 'poi',
+          stylers: [{visibility: 'off'}]
+        },
+        {
           featureType: 'administrative.locality',
           elementType: 'labels.text.fill',
           stylers: [{color: '#d59563'}]
-        },
-        {
-          featureType: 'poi',
-          elementType: 'labels.text.fill',
-          stylers: [{color: '#d59563'}]
-        },
-        {
-          featureType: 'poi.park',
-          elementType: 'geometry',
-          stylers: [{color: '#263c3f'}]
-        },
-        {
-          featureType: 'poi.park',
-          elementType: 'labels.text.fill',
-          stylers: [{color: '#6b9a76'}]
         },
         {
           featureType: 'road',
