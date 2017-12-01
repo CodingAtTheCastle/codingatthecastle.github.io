@@ -18,7 +18,7 @@
         <link rel="icon" type="image/png" sizes="16x16" href="favicon16.png" />
 
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="stylesheet" href="css/style.css?v=6" />
+        <link rel="stylesheet" href="css/style.css?v=1" />
     </head>
 <body>
 
@@ -39,7 +39,7 @@
         </p>
         <h2>What is Castle Coding?</h2>
         <p>
-            Castle Coding is an open coding event at <a href="http://www.thecastle.nu/">The Castle</a> (the coolest and most welcoming co-working space in Stockholm).
+            Castle Coding is an open coding event at <a href="#sponsor" class="animated_underline smooth_scroll">The Castle</a> (the coolest and most welcoming co-working space in Stockholm).
         </p>
         <p>It is free for anyone to join, both members of The Castle and outsiders are welcome!</p>
         <p>
@@ -71,16 +71,44 @@
     </div>
     <div class="mapwrapper">
         <div id="googlemap"></div>
-        <div class="mapoverlay">
-            <a href="http://maps.google.com/maps?z=14&q=Slottsbacken 8, Stockholm" target="_blank">
-                The Castle<br />
-                Slottsbacken 8<br />
-                113 40 Stockholm<br />
-            </a>
+        <a href="http://maps.google.com/maps?z=14&q=Slottsbacken 8, Stockholm" target="_blank" class="mapoverlay">
+                Get directions
+        </a>
+    </div>
+    <div class="main_content">
+    <h2 id="sponsor">Sponsor</h2>
+    </div>
+    <div class="card_container">
+        <!-- card_container has display flex on bigger screens, to prepare for more cards  -->
+        <div class="card">
+            <div class="card_head rainbow_colors">
+                <div class="card_head_content">
+                    <img src="img/castleicon.jpg" class="card_icon" />
+                </div>
+            </div>
+            <div class="card_content">
+                <h3 class="card_headline">The Castle “Slottet” Slottsbacken 8</h3>
+                <p>
+                    A co-working space located in Gamla Stan, Stockholm
+                </p>
+                <p class="card_links">
+                    <a href="http://www.thecastle.nu/" target="_blank" class="animated_underline">
+                        <img src="img/globe_icon.svg" />
+                        Website
+                    </a>
+                    <a href="https://www.facebook.com/thecastlesthlm/" target="_blank" class="animated_underline">
+                        <img src="img/facebook_icon.svg" />
+                        Facebook
+                    </a>
+                    <a href="https://www.instagram.com/thecastlesthlm/" target="_blank" class="animated_underline">
+                        <img src="img/instagram_icon.svg" />
+                        Instagram
+                    </a>
+                </p>
+            </div>
         </div>
     </div>
     <div class="main_content">
-
         <p>
            Hope to see you soon!
         </p>
@@ -88,9 +116,10 @@
             //The Castle Coders
         </p>
     </div>
+
     <div class="links_content">
-        <a href="https://github.com/CodingAtTheCastle">
-            <img src="img/github_logo.svg" /><br />
+        <a href="https://github.com/CodingAtTheCastle" class="animated_underline">
+            <img src="img/github_icon.svg" /><br />
             Join us on Github!
         </a>
     </div>
@@ -101,7 +130,7 @@
 
 <script src="js/noframework.waypoints.min.js"></script>
 <script src="js/inview.min.js"></script>
-<script src="js/main.js?v=4"></script>
+<script src="js/main.js?v=1"></script>
 
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCO-Wo29n8Jeurm_Va_acgoA5vG6y3JG54&callback=initMap"></script>
 

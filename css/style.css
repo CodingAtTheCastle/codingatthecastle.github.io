@@ -8,6 +8,11 @@ body {
     font-family: 'Raleway', sans-serif;
 }
 
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
 
 /*
 Adding a cool underline effect on links 
@@ -17,11 +22,14 @@ a {
     position: relative;
     color:blue;
     text-decoration: none;
-    font-weight: bold;
     display: inline-block;
 }
 
-a:before {
+.animated_underline {
+    font-weight: bold;
+}
+
+.animated_underline:before {
     content: "";
     position: absolute;
     width: 100%;
@@ -36,7 +44,7 @@ a:before {
     transition: all 0.2s ease-in-out 0s;
 }
 
-a:hover:before {
+.animated_underline:hover:before {
     visibility: visible;
     -webkit-transform: scaleX(1);
     transform: scaleX(1);
@@ -84,7 +92,8 @@ a:hover:before {
 
 .separator {
     color: #d69563;
-    margin: 30px auto 10px;
+    margin: 40px auto 20px;
+    line-height: 2px;
     max-width: 240px;
     text-align: center;
     position: relative;
@@ -94,8 +103,8 @@ a:hover:before {
     display: block;
     width: 40%;
     content: "";
-    margin-top: 10px;
     border: 1px solid #d69563;
+    border-radius: 2px;
 }
 
 .separator:before {
@@ -133,22 +142,128 @@ a:hover:before {
     z-index: 2;
 }
 
-.mapoverlay a:hover:before {
-    visibility: visible;
-    -webkit-transform: scaleX(1);
-     transform: scaleX(1);
+.mapoverlay:hover {
+    background: #eee;
 }
 
-.mapoverlay a:after {
-    list-style: none;
+#sponsor {
+    padding-top: 20px; 
+    margin-bottom: 10px;
+}
+
+.card_container {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.card_container h2 {
+    width: 100%;
+}
+
+.card {
+    max-width: 300px;
+    margin: 0 20px 20px 20px;
+    border-radius: 3px;
+    background: #fff;
+    overflow: hidden;
+    box-shadow: 0 1px 6px hsla(0, 0%, 0%, 0.12), 0 1px 4px hsla(0, 0%, 0%, 0.12);
+    transition: transform .3s, box-shadow .2s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 30px hsla(0, 0%, 0%, 0.19), 0 6px 10px hsla(0, 0%, 0%, 0.23);
+}
+
+.card_head {
+    min-height: 160px;
+    padding: 30px;
+    background:#320734;
+    color: #ffffff;
+}
+
+.card .card_head .card_head_content {
+    transition: transform .3s;
+}
+
+.card:hover .card_head .card_head_content {
+    transform: scale(1.2);
+}
+
+.card_icon {
+    width: 100%;
+    max-width: 100px;
+    display: block;
+    margin: 0 auto;
+}
+
+.card_content {
+    height: 50%;
+    padding: 20px;
+    min-height: 160px;
+    color: #aaa;
+    transition: color .3s;
+}
+
+.card .card_headline {
     margin: 0;
-    padding: 0;
+    color: #555;
+    transition: color .3s;
+}
+
+.card:hover .card_content {
+    color: #333;
+}
+
+.card:hover .card_headline  {
+    color: #222;
+}
+
+.card_links {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.card_links a img {
+    width: 30px;
+    display: block;
+    margin: 0 auto 5px auto;
+}
+
+.card_links a {
+    margin: 10px;
+    font-size: 0.8em;
+}
+
+.rainbow_colors {
+    background: #eec34a;
+    background: -moz-linear-gradient(-45deg, #eec34a 0%, #e7554c 25%, #c04f99 50%, #3f94b4 75%, #11b079 100%);
+    background: -webkit-linear-gradient(-45deg, #eec34a 0%,#e7554c 25%,#c04f99 50%,#3f94b4 75%,#11b079 100%);
+    background: linear-gradient(135deg, #eec34a 0%,#e7554c 25%,#c04f99 50%,#3f94b4 75%,#11b079 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eec34a', endColorstr='#11b079',GradientType=1 );
 }
 
 #googlemap {
     position: relative;
     width: 100%;
     padding-top: 50%;
+}
+
+@media screen and (max-width: 700px) {
+    /*
+    Css inside this media query applies on screens smaller than 700px
+    */
+
+    .card_container {
+        display: block;
+    }
+
+    .card {
+        margin: 0 auto 20px auto;
+
 }
 
 @media screen and (max-width: 600px) {

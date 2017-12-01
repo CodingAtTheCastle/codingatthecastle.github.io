@@ -1,7 +1,39 @@
 /* Insert cool JavaScript here */
 console.log('Castle Coding for the win 🦄');
 
+/*
+A tip if you want to serve this static from a local webserver is http-server
+https://www.npmjs.com/package/http-server
+*/
+
 window.addEventListener('scroll', scrollStuff);
+
+//puts all .smooth_scroll in an array
+const smooth_scroll_links = document.querySelectorAll('.smooth_scroll');
+
+//loop through array to addEventListener on each one of the objects
+smooth_scroll_links.forEach(function(e) {
+  e.addEventListener('click', smooth_scroll);
+});
+
+function smooth_scroll(e) {
+  e.preventDefault();
+  const link = e.currentTarget;
+
+  //substring(1) removes the first # character from the string
+  let href = link.getAttribute('href').substring(1);
+
+  const target = document.getElementById(href);
+  console.log(href);
+  
+  //this just adds the hash to the URL, as you would normaly expect from clicking a hash link
+  window.history.pushState("new url", "Castle Coding", link.getAttribute('href'));
+
+  target.scrollIntoView({
+    block: 'start',
+    behavior: 'smooth',
+  });
+}
 
 function scrollStuff() {
     /*
@@ -155,4 +187,3 @@ function initMap() {
       }
     });
 }
-
