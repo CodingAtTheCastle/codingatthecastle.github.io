@@ -6,12 +6,21 @@ html, body {
 
 body {
     font-family: 'Raleway', sans-serif;
+    color: #222;
 }
 
 * {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+}
+
+p {
+    color: #777;
+}
+
+h1, h2, h3 {
+    letter-spacing: 1px;
 }
 
 /*
@@ -205,8 +214,12 @@ a {
     height: 50%;
     padding: 20px;
     min-height: 160px;
-    color: #aaa;
+    color: #999;
     transition: color .3s;
+}
+
+.card_content p {
+    color: #999;  
 }
 
 .card .card_headline {
@@ -215,8 +228,8 @@ a {
     transition: color .3s;
 }
 
-.card:hover .card_content {
-    color: #333;
+.card:hover .card_content, .card:hover .card_content p {
+    color: #777;
 }
 
 .card:hover .card_headline  {
