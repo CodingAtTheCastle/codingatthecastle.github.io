@@ -259,6 +259,7 @@ a {
 
     .card_container {
         display: block;
+        padding: 0 20px;
     }
 
     .card {
