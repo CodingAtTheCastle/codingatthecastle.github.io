@@ -293,3 +293,9 @@ a {
         padding-top: 90%;
     }
 }
+
+@media screen and (max-width: 290px) {
+    .card_links {
+        display: block;
+    }
+}
