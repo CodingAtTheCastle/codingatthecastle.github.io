@@ -19,13 +19,13 @@ Adding a cool underline effect on links
 as described here http://tobiasahlin.com/blog/css-trick-animating-link-underlines/
 */
 a {
-    position: relative;
     color:#0000EE;
     text-decoration: none;
     display: inline-block;
 }
 
 .animated_underline {
+    position: relative;
     font-weight: bold;
 }
 
@@ -140,10 +140,13 @@ a {
     background-color: #fff;
     padding: 20px;
     z-index: 2;
+    border-radius: 3px;
+    transition: transform .3s
 }
 
 .mapoverlay:hover {
-    background: #eee;
+    transform: scale(1.05);
+    box-shadow: 0 10px 30px hsla(0, 0%, 0%, 0.19), 0 6px 10px hsla(0, 0%, 0%, 0.23);
 }
 
 #sponsor {
