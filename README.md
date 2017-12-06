@@ -14,10 +14,8 @@ When you are set up and want to clone this repo run this command in your termina
 
 The castle coding website folder will be copied to the folder you are standing in in the terminal
 
-Read more about cloning repos here:
+### Read more about cloning repos here:
 https://help.github.com/articles/cloning-a-repository/
-
-then talk to someone at Castle Coding to help you get set up.
 
 Might be a good idea to read through this article as well https://guides.github.com/activities/hello-world/ to get a sense of the terminology before you start going at it.
 
