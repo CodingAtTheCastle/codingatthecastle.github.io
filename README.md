@@ -10,7 +10,7 @@ If you are new to Github, start by creating a personal account.
 
 When you are set up and want to clone this repo run this command in your terminal
 
-git clone https://github.com/CodingAtTheCastle/codingatthecastle.github.io.git
+> git clone https://github.com/CodingAtTheCastle/codingatthecastle.github.io.git
 
 The castle coding website folder will be copied to the folder you are standing in in the terminal
 
