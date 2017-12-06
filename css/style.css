@@ -28,7 +28,7 @@ Adding a cool underline effect on links
 as described here http://tobiasahlin.com/blog/css-trick-animating-link-underlines/
 */
 a {
-    color:#0000EE;
+    color:#2788ab;
     text-decoration: none;
     display: inline-block;
 }
@@ -45,7 +45,7 @@ a {
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color: #0000EE;
+    background-color: #2788ab;
     visibility: hidden;
     -webkit-transform: scaleX(0);
     transform: scaleX(0);
