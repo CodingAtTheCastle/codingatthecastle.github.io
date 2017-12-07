@@ -19,16 +19,16 @@ smooth_scroll_links.forEach(function(e) {
 function smooth_scroll(e) {
   e.preventDefault();
   const link = e.currentTarget;
-
+  
   //substring(1) removes the first # character from the string
   let href = link.getAttribute('href').substring(1);
-
+  
   const target = document.getElementById(href);
   console.log(href);
-  
+    
   //this just adds the hash to the URL, as you would normaly expect from clicking a hash link
   window.history.pushState("new url", "Castle Coding", link.getAttribute('href'));
-
+  
   target.scrollIntoView({
     block: 'start',
     behavior: 'smooth',
@@ -148,6 +148,11 @@ function initMap() {
         }
     ];
 
+    /*
+      Check out this website for more info on what you can do with the google maps api
+      https://developers.google.com/maps/documentation/javascript/examples/
+    */
+
     var theCastleLatLng = {lat: 59.3261685, lng: 18.0739393};
 
     var map = new google.maps.Map(map_obj, {
@@ -164,6 +169,7 @@ function initMap() {
         url: 'img/CastleCodingMarker.png',
         scaledSize: new google.maps.Size(80, 86)
       };
+
     var marker = new google.maps.Marker({
         position: theCastleLatLng,
         animation: google.maps.Animation.DROP,
@@ -172,11 +178,11 @@ function initMap() {
     });
 
     /*
-      Using Waypoints Inview to trigger a marker drop when .mapoverlay comes in view
+      Using Waypoints Inview to trigger a marker drop when '.mapoverlay' comes in view
       http://imakewebthings.com/waypoints/
     */
 
-    var waypoint = new Waypoint.Inview({
+    var dropMarker = new Waypoint.Inview({
       element: document.querySelector('.mapoverlay'),
       enter: function(direction) {
         //mapoverlay is now on screen, add the marker if markerDropped is false
@@ -186,4 +192,17 @@ function initMap() {
         }
       }
     });
+
+    var removeMarker = new Waypoint.Inview({
+      element: document.querySelector('.mapwrapper'),
+      exited: function(direction) {
+        //'.mapwrapper' has exited the screen, remove the marker if markerDropped is true
+        if (markerDropped) {
+          marker.setMap(null);
+          marker.setAnimation(google.maps.Animation.DROP)
+          markerDropped = false;
+        }
+      }
+    });
+
 }
