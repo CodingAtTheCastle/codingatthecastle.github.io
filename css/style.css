@@ -88,6 +88,7 @@ a {
 }
 
 .headline_icon {
+    height: 24px;
     margin-bottom: -2px;
 }
 
@@ -303,6 +304,10 @@ a {
     }
     .main_content h2 {
         font-size: 1.2em;
+    }
+
+    .headline_icon {
+        height: 20px;
     }
 
     .largeEmojis {
