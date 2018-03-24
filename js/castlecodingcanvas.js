@@ -47,12 +47,14 @@ function runAnimation() {
 
       let randSize;
       if(window.innerWidth < 600) {
-        randSize = Math.floor( 30 * Math.random() ) + 4;
+        randSize = Math.floor( 20 * Math.random() ) + 4;
       } else {
-        randSize = Math.floor( 50 * Math.random() ) + 4;
+        randSize = Math.floor( 40 * Math.random() ) + 4;
       }
 
-      const colorId = Math.round((rand % (rand / cwidth)) * 10);
+      const colorId = Math.round((rand / cwidth) * 10);
+
+      //console.log(colorId)
 
       numbers.push({
         x: rand,
@@ -82,6 +84,7 @@ function runAnimation() {
 
     });
 
+    
     setTimeout(() => {
       runAnimation()
     },framerate);
@@ -90,9 +93,13 @@ function runAnimation() {
     //fastest frame rate
     /*
     requestAnimationFrame(() => {
-      requestAnimationFrame(runAnimation());
+      requestAnimationFrame(() => {
+        runAnimation()
+      });
     });
     */
+    
+    
   };
 };
 
@@ -154,8 +161,9 @@ function generateColor(colorStart,colorEnd,colorCount){
 		saida.push(convertToHex(c));
   }
   
-
   saida.reverse()
+
+  saida.push(colorEnd);
 
 	return saida;
 }
