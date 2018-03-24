@@ -121,4 +121,4 @@ var headerView = new Waypoint.Inview({
       }
 });
 
-window.addEventListener('resize', resizeStuff);
+//window.addEventListener('resize', resizeStuff);
