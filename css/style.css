@@ -307,10 +307,6 @@ a {
 
 @media screen and (max-width: 600px) {
 
-    .header_background:after {
-        background-image: url('../img/cc500.png');
-    }
-
     /*
     Css inside this media query applies on screens smallen than 600px
     */
@@ -344,4 +340,9 @@ a {
     .card_links {
         display: block;
     }
+
+    .header_background:after {
+        background-image: url('../img/cc500.png');
+    }
+
 }
