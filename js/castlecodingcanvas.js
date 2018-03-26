@@ -6,6 +6,7 @@ let animationRunning = true;
 let framerate = 200;
 let blur = 40;
 let numberofcolors = 10;
+let simultaneousNumbers = 20;
 let numbers = [];
 const colors = generateColor('#a720a1','#d9bc18',numberofcolors)
 
@@ -41,7 +42,7 @@ function drawNumber(x,y,size,color) {
 
 function runAnimation() {
   if (animationRunning) {
-    if (numbers.length < 10) {
+    if (numbers.length < simultaneousNumbers) {
       //add new number
       const rand = Math.floor( cwidth * Math.random() );
 
