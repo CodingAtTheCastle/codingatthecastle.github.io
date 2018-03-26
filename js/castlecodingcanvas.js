@@ -124,12 +124,14 @@ setCanvasSize();
 
 //make sure that castle coding canvas is not running when it is off screen
 var headerView = new Waypoint.Inview({
-      element: header_background,
+      element: document.querySelector('.header'),
       enter: function(direction) {
+        console.log('header in view')
         animationRunning = true;
         runAnimation();
       },
       exited: function(direction) {
+        console.log('header out of view')
         animationRunning = false;
       }
 });
