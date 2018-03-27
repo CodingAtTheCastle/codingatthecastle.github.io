@@ -313,9 +313,6 @@ a {
     .header {
         height: 50vh;
     }
-    .header_background {
-        background-image: url('../img/splash.small.jpg');
-    }
     .main_content h1 {
         font-size: 1.5em;
     }
