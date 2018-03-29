@@ -3,9 +3,9 @@ const ct = canvas.getContext('2d');
 let cwidth = canvas.width;
 let cheight = canvas.height;
 let animationRunning = true;
-let framerate = 200;
+let framerate = 150;
 let blur = 40;
-let numberofcolors = 10;
+let numberofcolors = 100;
 let simultaneousNumbers = 20;
 let numbers = [];
 const colors = generateColor('#a720a1','#d9bc18',numberofcolors)
@@ -53,7 +53,7 @@ function runAnimation() {
         randSize = Math.floor( 40 * Math.random() ) + 4;
       }
 
-      const colorId = Math.round((rand / cwidth) * 10);
+      const colorId = Math.round((rand / cwidth) * numberofcolors);
 
       //console.log(colorId)
 
@@ -90,16 +90,14 @@ function runAnimation() {
       runAnimation()
     },framerate);
     
-
-    //fastest frame rate
     /*
+    //Update as fast as the frame reate allows
     requestAnimationFrame(() => {
       requestAnimationFrame(() => {
         runAnimation()
       });
     });
     */
-    
     
   };
 };
@@ -140,10 +138,10 @@ var headerView = new Waypoint.Inview({
 function generateColor(colorStart,colorEnd,colorCount){
 
 	// The beginning of your gradient
-	var start = convertToRGB (colorStart);    
+	var start = convertToRGB(colorStart);    
 
 	// The end of your gradient
-	var end   = convertToRGB (colorEnd);    
+	var end = convertToRGB(colorEnd);    
 
 	// The number of colors to compute
 	var len = colorCount;
